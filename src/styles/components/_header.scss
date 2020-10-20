@@ -1,6 +1,6 @@
 @use '../libs' as *;
 
-.header{
+.header {
     display: flex;
     justify-content: space-between;
     height: 55px;
@@ -17,11 +17,11 @@
             padding: 12px;
         }
 
-        i{
+        i {
             font-size: 130%;
         }
 
-        .brand-name{
+        .brand-name {
             font-size: 150%;
             padding-left: 8px;
         }
@@ -30,9 +30,52 @@
             height: 30px;
         }
     }
-    .head-right{
-        img{
-            height: 50px;
+
+    .head-center {
+        .searchBar {
+            background-color: getColor(search);
+            height: 100%;
+            width: 50vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 10px;
+
+            i {
+                padding: 0 25px;
+                font-size: 120%;
+            }
+
+            .left-search {
+                @include flex-center;
+                input {
+                    background-color: getColor(transp);
+                    border: none;
+                    width: 40vw;
+                    height: 50px;
+                    outline: none;
+                    font-size: 110%;
+
+                    &::placeholder {
+                        color: getColor(placehold);
+                    }
+                }
+            }
+        }
+    }
+
+    .head-right {
+        @include flex-center;
+        justify-content: space-between;
+        width: 13vw;
+        padding-right: 10px;
+
+        i {
+            font-size: 130%;
+        }
+
+        img {
+            height: 35px;
             border-radius: 50%;
         }
     }
