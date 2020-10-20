@@ -182,6 +182,34 @@ body {
 .side-bar .compose .compose-btn i {
   font-size: 200%;
 }
+.side-bar .mail-folders .folder {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  padding: 10px 10px;
+  padding-left: 25px;
+  margin-right: 20px;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+  color: #fff;
+}
+.side-bar .mail-folders .folder:first-of-type {
+  background-color: rgba(255, 255, 255, 0.267);
+}
+.side-bar .mail-folders .folder:hover {
+  background-color: rgba(255, 255, 255, 0.158);
+}
+.side-bar .mail-folders .folder i {
+  color: rgba(255, 255, 255, 0.664);
+}
+.side-bar .mail-folders .folder .folder-name {
+  margin-left: 20px;
+}
+.side-bar .mail-folders .folder .cont-num {
+  margin-left: auto;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.411);
+  font-size: 90%;
+}
 .side-bar .hangouts .my-user .user-online img {
   height: 35px;
   border-radius: 50%;
@@ -189,4 +217,96 @@ body {
 
 .email-main {
   grid-column: 2;
+}
+.email-main .actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.664);
+  padding: 15px 20px;
+}
+.email-main .actions .left-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: auto;
+}
+.email-main .actions .left-actions > * {
+  margin-right: 30px;
+}
+.email-main .actions .right-actions > * {
+  margin-right: 30px;
+}
+.email-main .filters {
+  background-color: rgba(255, 255, 255, 0.87);
+  display: flex;
+  height: 60px;
+  align-items: center;
+  margin-right: 25px;
+  border-bottom: 1px solid #DADBDE;
+}
+.email-main .filters .filter {
+  position: relative;
+  color: #6E6B6D;
+  width: 24%;
+}
+.email-main .filters .filter i {
+  margin-left: 15%;
+}
+.email-main .filters .filter span {
+  margin-left: 20px;
+}
+.email-main .filters .filter .underline {
+  position: absolute;
+  bottom: -21px;
+  height: 5px;
+  width: 90%;
+  margin-left: 5%;
+  background-color: #D93025;
+  overflow: hidden;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  opacity: 0;
+}
+.email-main .filters .filter .underline:nth-of-type(1) {
+  opacity: 1;
+}
+.email-main .filters .filter:first-of-type {
+  color: #D93025;
+}
+.email-main .emails {
+  margin-right: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.email-main .emails .email {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.87);
+  padding: 15px;
+  border-bottom: 1px solid #DADBDE;
+}
+.email-main .emails .email .email-sender {
+  position: absolute;
+  margin-left: 8%;
+  font-weight: bold;
+}
+.email-main .emails .email .email-title {
+  position: absolute;
+  margin-left: 28%;
+  font-weight: bold;
+}
+.email-main .emails .email .email-time {
+  font-weight: bold;
+  font-size: 80%;
+  margin-left: auto;
+}
+.email-main .emails .email .email-actions {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  color: #6E6B6D;
+  font-size: 120%;
+  width: 10%;
+  right: 20px;
 }

@@ -22,6 +22,42 @@
         }
     }
 
+    .mail-folders{
+        .folder {
+            display: flex;
+            align-items: center;
+            padding: 5px;
+            padding: 10px 10px;
+            padding-left: $side-left-pad;
+            margin-right: $side-right-marg;
+            border-bottom-right-radius: 30px;
+            border-top-right-radius: 30px;
+            color: getColor(fg);
+            
+            &:first-of-type{
+                background-color: getColor(search);
+            }
+
+            &:hover{
+                background-color: getColor(folder-hover);
+            }
+
+
+            i{
+                color: getColor(side-icon);
+            }
+            .folder-name{
+                // font-weight: bold;
+                margin-left: 20px;
+            }
+            .cont-num{
+                margin-left: auto;
+                text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.411);
+                font-size: 90%;
+            }
+        }
+    }
+
     .hangouts {
         .my-user {
             .user-online{

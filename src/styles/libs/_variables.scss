@@ -4,6 +4,15 @@ $left-w: 20%;
 $col-widths: $left-w 1fr;
 $header-widths: $left-w 1fr 1fr;
 
+
+// Side Bar
+$side-left-pad: 25px;
+$side-right-marg: 20px;
+
+
+//email 
+$em-right-marg:25px;
+
 $color_palette: (
     // Basic
     transp: rgba(255, 255, 255, 0),
@@ -17,4 +26,12 @@ $color_palette: (
 
     // SideBar
     compose: #fff,
+    side-icon: rgba(255, 255, 255, 0.664),
+    folder-hover: rgba(255, 255, 255, 0.158),
+
+    // Emails
+    em_bg: rgba(255, 255, 255, 0.87),
+    filter: #6E6B6D,
+    red: #D93025,
+    outline-em: #DADBDE,
 );
