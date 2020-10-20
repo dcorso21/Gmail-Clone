@@ -2,4 +2,33 @@
 
 .side-bar {
     grid-column: 1;
+
+    .compose{
+        .compose-btn {
+            background-color: getColor(compose);
+            width: 40%;
+            border-radius: 40px;
+            height: 55px;
+            @include flex-center;
+            justify-content: space-evenly;
+            mask-image: url(#plus);
+            margin: 18px 10px;
+
+            i{
+                font-size: 200%;
+                // color: getColor(transp);
+            }
+
+        }
+    }
+
+    .hangouts {
+        .my-user {
+            .user-online{
+                img{
+                    @include user-pic;
+                }
+            }
+        }
+    }
 }

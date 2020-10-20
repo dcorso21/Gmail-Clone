@@ -1,6 +1,8 @@
 $br-px: 70px;
 $wh-br: $br-px / 4;
-$col-widths: 30% 1fr;
+$left-w: 20%;
+$col-widths: $left-w 1fr;
+$header-widths: $left-w 1fr 1fr;
 
 $color_palette: (
     // Basic
@@ -12,4 +14,7 @@ $color_palette: (
     //Searchbar
     search: rgba(255, 255, 255, 0.267),
     placehold: #fff,
+
+    // SideBar
+    compose: #fff,
 );

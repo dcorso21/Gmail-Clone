@@ -1,17 +1,20 @@
 @use '../libs' as *;
 
 .header {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: $header-widths;
+    // justify-content: space-between;
     height: 55px;
     border-bottom: 1px solid getColor(outline);
     padding: 7px 7px 7px 15px;
     color: getColor(fg);
 
     .head-left {
+        grid-column: 1;
         display: flex;
         justify-content: center;
         align-items: center;
+        width: min-content;
 
         & > * {
             padding: 12px;
@@ -32,6 +35,7 @@
     }
 
     .head-center {
+        grid-column: 2;
         .searchBar {
             background-color: getColor(search);
             height: 100%;
@@ -65,10 +69,13 @@
     }
 
     .head-right {
+        grid-column: 3;
         @include flex-center;
         justify-content: space-between;
         width: 13vw;
         padding-right: 10px;
+        // float: right;
+        margin-left: auto;
 
         i {
             font-size: 130%;
