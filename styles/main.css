@@ -83,21 +83,23 @@ body {
 
 .main-layout {
   display: grid;
-  grid-template-columns: 30% 1fr;
+  grid-template-columns: 20% 1fr;
 }
 
 .header {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 20% 1fr 1fr;
   height: 55px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.116);
   padding: 7px 7px 7px 15px;
   color: #fff;
 }
 .header .head-left {
+  grid-column: 1;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: min-content;
 }
 .header .head-left > * {
   padding: 12px;
@@ -111,6 +113,9 @@ body {
 }
 .header .head-left img {
   height: 30px;
+}
+.header .head-center {
+  grid-column: 2;
 }
 .header .head-center .searchBar {
   background-color: rgba(255, 255, 255, 0.267);
@@ -142,12 +147,14 @@ body {
   color: #fff;
 }
 .header .head-right {
+  grid-column: 3;
   display: flex;
   justify-content: center;
   align-items: center;
   justify-content: space-between;
   width: 13vw;
   padding-right: 10px;
+  margin-left: auto;
 }
 .header .head-right i {
   font-size: 130%;
@@ -159,6 +166,25 @@ body {
 
 .side-bar {
   grid-column: 1;
+}
+.side-bar .compose .compose-btn {
+  background-color: #fff;
+  width: 40%;
+  border-radius: 40px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  mask-image: url(#plus);
+  margin: 18px 10px;
+}
+.side-bar .compose .compose-btn i {
+  font-size: 200%;
+}
+.side-bar .hangouts .my-user .user-online img {
+  height: 35px;
+  border-radius: 50%;
 }
 
 .email-main {
