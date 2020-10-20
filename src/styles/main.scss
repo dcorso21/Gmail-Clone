@@ -5,4 +5,6 @@
 @use 'base/layout';
 
 //Components
-@use 'components/header'
+@use 'components/header';
+@use 'components/side-bar';
+@use 'components/email-main';

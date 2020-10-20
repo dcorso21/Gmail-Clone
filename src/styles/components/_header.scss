@@ -1,9 +1,31 @@
+@use '../libs' as *;
+
 .header{
     display: flex;
     justify-content: space-between;
+    height: 55px;
+    border-bottom: 1px solid getColor(outline);
+    padding: 7px 7px 7px 15px;
+    color: getColor(fg);
 
     .head-left {
         display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & > * {
+            padding: 12px;
+        }
+
+        i{
+            font-size: 130%;
+        }
+
+        .brand-name{
+            font-size: 150%;
+            padding-left: 8px;
+        }
+
         img {
             height: 30px;
         }

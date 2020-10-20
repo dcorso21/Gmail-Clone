@@ -1,27 +1,11 @@
 $br-px: 70px;
 $wh-br: $br-px / 4;
+$col-widths: 30% 1fr;
 
 $color_palette: (
     // Basic
+    transp: rgba(255, 255, 255, 0),
     bg: #16212b,
     fg: #fff,
-    outline: #253341,
-    transp: rgba(255, 255, 255, 0),
-    // Hover Buttons
-    hover_fg: #1da1f2,
-    hover_bg: #172d3f,
-    // Accent
-    accent: #1da1f2,
-    hover_acc: #1da0f2c5,
-    //User Icon
-    user_bg: #cdd6dd,
-    user_fg: #657787,
-    //Forms
-    input_placeholder: #8899a6,
-    //Greyed Out
-    grey_acc: #1da0f273,
-    grey_fg: #8899a6,
-    //Profile
-    card_bg: #192734,
-    card_bg_hover: #18232e,
+    outline: rgba(255, 255, 255, 0.116)
 );
