@@ -112,8 +112,48 @@ body {
 .header .head-left img {
   height: 30px;
 }
-.header .head-right img {
+.header .head-center .searchBar {
+  background-color: rgba(255, 255, 255, 0.267);
+  height: 100%;
+  width: 50vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+}
+.header .head-center .searchBar i {
+  padding: 0 25px;
+  font-size: 120%;
+}
+.header .head-center .searchBar .left-search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .head-center .searchBar .left-search input {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  width: 40vw;
   height: 50px;
+  outline: none;
+  font-size: 110%;
+}
+.header .head-center .searchBar .left-search input::placeholder {
+  color: #fff;
+}
+.header .head-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  width: 13vw;
+  padding-right: 10px;
+}
+.header .head-right i {
+  font-size: 130%;
+}
+.header .head-right img {
+  height: 35px;
   border-radius: 50%;
 }
 
