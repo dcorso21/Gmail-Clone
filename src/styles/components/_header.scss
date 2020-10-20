@@ -1,0 +1,17 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+
+    .head-left {
+        display: flex;
+        img {
+            height: 30px;
+        }
+    }
+    .head-right{
+        img{
+            height: 50px;
+            border-radius: 50%;
+        }
+    }
+}
