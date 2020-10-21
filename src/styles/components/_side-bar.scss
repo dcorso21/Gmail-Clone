@@ -6,6 +6,7 @@
 
     .compose {
         .compose-btn {
+            cursor: pointer;
             background-color: getColor(compose);
             position: relative;
             width: 60%;
@@ -56,6 +57,7 @@
         @include side-folder-head;
 
         .my-user {
+            cursor: pointer;
             width: 80%;
             margin: auto;
             padding: 10px 0;
@@ -86,7 +88,7 @@
                 justify-content: space-between;
                 .user-info {
                     margin-left: 10px;
-                    i{
+                    i {
                         margin-left: 10px;
                     }
                 }
@@ -94,6 +96,7 @@
         }
 
         .friend {
+            cursor: pointer;
             color: getColor(fg);
             display: flex;
             align-items: center;

@@ -13,6 +13,7 @@
 }
 
 @mixin side-folder {
+    cursor: pointer;
     position: relative;
     display: flex;
     align-items: center;

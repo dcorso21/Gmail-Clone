@@ -115,6 +115,9 @@ body {
   padding: 7px 7px 7px 15px;
   color: #fff;
 }
+.header > * {
+  cursor: pointer;
+}
 .header .head-left {
   grid-column: 1;
   display: flex;
@@ -191,6 +194,7 @@ body {
   grid-column: 1;
 }
 .side-bar .compose .compose-btn {
+  cursor: pointer;
   background-color: #fff;
   position: relative;
   width: 60%;
@@ -212,6 +216,7 @@ body {
   overflow: scroll;
 }
 .side-bar .mail-folders .folder {
+  cursor: pointer;
   position: relative;
   display: flex;
   align-items: center;
@@ -252,6 +257,7 @@ body {
 }
 .side-bar .meet-box .start-meet,
 .side-bar .meet-box .join-meet {
+  cursor: pointer;
   position: relative;
   display: flex;
   align-items: center;
@@ -292,6 +298,7 @@ body {
   padding: 15px 25px;
 }
 .side-bar .hangouts .my-user {
+  cursor: pointer;
   width: 80%;
   margin: auto;
   padding: 10px 0;
@@ -330,6 +337,7 @@ body {
   margin-left: 10px;
 }
 .side-bar .hangouts .friend {
+  cursor: pointer;
   color: #fff;
   display: flex;
   align-items: center;
@@ -381,16 +389,15 @@ body {
 .email-main {
   grid-column: 2;
 }
-.email-main .scroll {
-  overflow: scroll;
-  height: 86vh;
-}
 .email-main .actions {
   display: flex;
   justify-content: center;
   align-items: center;
   color: rgba(255, 255, 255, 0.664);
   padding: 15px 20px;
+}
+.email-main .actions i {
+  cursor: pointer;
 }
 .email-main .actions .left-actions {
   display: flex;
@@ -403,6 +410,11 @@ body {
 }
 .email-main .actions .right-actions > * {
   margin-right: 30px;
+}
+.email-main .scroll {
+  cursor: pointer;
+  overflow: scroll;
+  height: 86vh;
 }
 .email-main .filters {
   background-color: rgba(252, 252, 252, 0.87);

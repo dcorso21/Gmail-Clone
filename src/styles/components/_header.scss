@@ -9,6 +9,10 @@
     padding: 7px 7px 7px 15px;
     color: getColor(fg);
 
+    & > * {
+        cursor: pointer;
+    }
+
     .head-left {
         grid-column: 1;
         display: flex;
