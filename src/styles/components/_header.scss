@@ -54,6 +54,7 @@
                 @include flex-center;
                 input {
                     background-color: getColor(transp);
+                    color: getColor(fg);
                     border: none;
                     width: 40vw;
                     height: 50px;

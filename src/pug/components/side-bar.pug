@@ -2,7 +2,8 @@
 
     .compose
         .compose-btn
-            i.compose-icon.fas.fa-plus#plus
+            img(src="imgs/google-compose.png", alt="plus")
+            //- i.compose-icon.fas.fa-plus#plus
             .compose-text Compose
 
     .mail-folders
@@ -26,15 +27,23 @@
             i.fas.fa-paper-plane
             .folder-name Sent
             .cont-num 5
+        .folder
+            //- i.fas.fa-paper-plane
+            .folder-name Spam
+            .cont-num 5
+        .folder
+            //- i.fas.fa-paper-plane
+            .folder-name All Mail
+            .cont-num 5
 
     .meet-box
         .head Meet
         .start-meet
             i.fas.fa-video
-            .start-text Start a Meeting
+            span.folder-name Start a Meeting
         .join-meet
             i.fas.fa-keyboard
-            .start-text Join a Meeting
+            span.folder-name Join a Meeting
 
     .hangouts
         .head Hangouts
@@ -42,12 +51,18 @@
             .user-online
                 img(src="imgs/fox.jpg", alt="fox")
                 .online-green
-            .user-name David Corson
-            i.fas.fa-caret-down
+            .user-line
+                .user-info 
+                    span.user-name David Corson
+                    i.fas.fa-caret-down
+                i.fas.fa-plus
         
-        .friend1
+        .friend
             .friend-icon
-            .user-name David Corson
+                .icon AB
+            .user-info 
+                .user-name Andrew Banes
+                .last-msg Nice talking to you!
 
     .footer-icons
         i.fas.fa-user

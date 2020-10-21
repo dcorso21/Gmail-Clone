@@ -23,7 +23,7 @@
   <div class="main-layout">
     <div class="side-bar">
       <div class="compose">
-        <div class="compose-btn"><i class="compose-icon fas fa-plus" id="plus"></i>
+        <div class="compose-btn"><img src="imgs/google-compose.png" alt="plus">
           <div class="compose-text">Compose</div>
         </div>
       </div>
@@ -48,15 +48,19 @@
           <div class="folder-name">Sent</div>
           <div class="cont-num">5</div>
         </div>
+        <div class="folder">
+          <div class="folder-name">Spam</div>
+          <div class="cont-num">5</div>
+        </div>
+        <div class="folder">
+          <div class="folder-name">All Mail</div>
+          <div class="cont-num">5</div>
+        </div>
       </div>
       <div class="meet-box">
         <div class="head">Meet</div>
-        <div class="start-meet"><i class="fas fa-video"></i>
-          <div class="start-text">Start a Meeting</div>
-        </div>
-        <div class="join-meet"><i class="fas fa-keyboard"></i>
-          <div class="start-text">Join a Meeting</div>
-        </div>
+        <div class="start-meet"><i class="fas fa-video"></i><span class="folder-name">Start a Meeting</span></div>
+        <div class="join-meet"><i class="fas fa-keyboard"></i><span class="folder-name">Join a Meeting</span></div>
       </div>
       <div class="hangouts">
         <div class="head">Hangouts</div>
@@ -64,11 +68,18 @@
           <div class="user-online"><img src="imgs/fox.jpg" alt="fox">
             <div class="online-green"></div>
           </div>
-          <div class="user-name">David Corson</div><i class="fas fa-caret-down"></i>
+          <div class="user-line">
+            <div class="user-info"> <span class="user-name">David Corson</span><i class="fas fa-caret-down"></i></div><i class="fas fa-plus"></i>
+          </div>
         </div>
-        <div class="friend1">
-          <div class="friend-icon"></div>
-          <div class="user-name">David Corson</div>
+        <div class="friend">
+          <div class="friend-icon">
+            <div class="icon">AB</div>
+          </div>
+          <div class="user-info"> 
+            <div class="user-name">Andrew Banes</div>
+            <div class="last-msg">Nice talking to you!</div>
+          </div>
         </div>
       </div>
       <div class="footer-icons"><i class="fas fa-user"></i><i class="fas fa-quote-right"></i><i class="fas fa-phone"></i></div>
@@ -80,35 +91,190 @@
         </div>
         <div class="right-actions"><span class="count">1-50 of 250</span><i class="fas fa-chevron-left"></i><i class="fas fa-chevron-right"></i></div>
       </div>
-      <div class="filters">
-        <div class="filter"><i class="fas fa-inbox"></i><span class="filter-title">Primary</span>
-          <div class="underline" id="pri-under"></div>
+      <div class="scroll">
+        <div class="filters">
+          <div class="filter"><i class="fas fa-inbox"></i><span class="filter-title">Primary</span>
+            <div class="underline" id="pri-under"></div>
+          </div>
+          <div class="filter"><i class="fas fa-user-friends"></i><span class="filter-title">Social</span></div>
+          <div class="filter"><i class="fas fa-tag"></i><span class="filter-title">Promotions</span></div>
+          <div class="filter"><i class="fas fa-info-circle"></i><span class="filter-title">Updates</span></div>
         </div>
-        <div class="filter"><i class="fas fa-user-friends"></i><span class="filter-title">Social</span></div>
-        <div class="filter"><i class="fas fa-tag"></i><span class="filter-title">Promotions</span></div>
-        <div class="filter"><i class="fas fa-info-circle"></i><span class="filter-title">Updates</span></div>
-      </div>
-      <div class="emails">
-        <div class="email">
-          <input type="checkbox" name=""><i class="far fa-star"></i>
-          <div class="email-sender">Mom</div>
-          <div class="email-title">Title of Email</div>
-          <div class="email-time">9:42 AM</div>
-          <div class="email-actions"><i class="fas fa-archive"></i><i class="fas fa-trash"></i><i class="fas fa-envelope-open"></i><i class="fas fa-clock"></i></div>
+        <div class="emails">
+          <div class="email">
+            <input type="checkbox" name=""><i class="far fa-star"></i>
+            <div class="email-sender">Sally Fields</div>
+            <div class="email-title">Title of Email</div>
+            <div class="email-time">9:42 AM</div>
+            <div class="email-actions"><i class="fas fa-archive"></i><i class="fas fa-trash"></i><i class="fas fa-envelope-open"></i><i class="fas fa-clock"></i></div>
+          </div>
+          <div class="email">
+            <input type="checkbox" name=""><i class="far fa-star"></i>
+            <div class="email-sender">YouTube</div>
+            <div class="email-title">You didn't sign up for these emails</div>
+            <div class="email-time">8:30 AM</div>
+            <div class="email-actions"><i class="fas fa-archive"></i><i class="fas fa-trash"></i><i class="fas fa-envelope-open"></i><i class="fas fa-clock"></i></div>
+          </div>
+          <div class="email">
+            <input type="checkbox" name=""><i class="far fa-star"></i>
+            <div class="email-sender">Andrew Beenstead</div>
+            <div class="email-title">This is an ordinary email</div>
+            <div class="email-time">Oct 12</div>
+            <div class="email-actions"><i class="fas fa-archive"></i><i class="fas fa-trash"></i><i class="fas fa-envelope-open"></i><i class="fas fa-clock"></i></div>
+          </div>
+          <div class="email">
+            <input type="checkbox" name=""><i class="far fa-star"></i>
+            <div class="email-sender">Bladder Stone Mark</div>
+            <div class="email-title">Title of Email</div>
+            <div class="email-time">Oct 5</div>
+            <div class="email-actions"><i class="fas fa-archive"></i><i class="fas fa-trash"></i><i class="fas fa-envelope-open"></i><i class="fas fa-clock"></i></div>
+          </div>
+          <div class="email">
+            <input type="checkbox" name=""><i class="far fa-star"></i>
+            <div class="email-sender">Demo Campaign</div>
+            <div class="email-title">Title of Email</div>
+            <div class="email-time">Oct 2</div>
+            <div class="email-actions"><i class="fas fa-archive"></i><i class="fas fa-trash"></i><i class="fas fa-envelope-open"></i><i class="fas fa-clock"></i></div>
+          </div>
+          <div class="email">
+            <input type="checkbox" name=""><i class="far fa-star"></i>
+            <div class="email-sender">Mail Service</div>
+            <div class="email-title">Title of Email</div>
+            <div class="email-time">Oct 1</div>
+            <div class="email-actions"><i class="fas fa-archive"></i><i class="fas fa-trash"></i><i class="fas fa-envelope-open"></i><i class="fas fa-clock"></i></div>
+          </div>
         </div>
-        <div class="email">
-          <input type="checkbox" name=""><i class="far fa-star"></i>
-          <div class="email-sender">Mom</div>
-          <div class="email-title">Title of Email</div>
-          <div class="email-time">9:42 AM</div>
-          <div class="email-actions"><i class="fas fa-archive"></i><i class="fas fa-trash"></i><i class="fas fa-envelope-open"></i><i class="fas fa-clock"></i></div>
+        <div class="emails">
+          <div class="email">
+            <input type="checkbox" name=""><i class="far fa-star"></i>
+            <div class="email-sender">Carlton Arms</div>
+            <div class="email-title">Title of Email</div>
+            <div class="email-time">Oct 1</div>
+            <div class="email-actions"><i class="fas fa-archive"></i><i class="fas fa-trash"></i><i class="fas fa-envelope-open"></i><i class="fas fa-clock"></i></div>
+          </div>
+          <div class="email">
+            <input type="checkbox" name=""><i class="far fa-star"></i>
+            <div class="email-sender">Momosisas</div>
+            <div class="email-title">Title of Email</div>
+            <div class="email-time">Sept 28</div>
+            <div class="email-actions"><i class="fas fa-archive"></i><i class="fas fa-trash"></i><i class="fas fa-envelope-open"></i><i class="fas fa-clock"></i></div>
+          </div>
+          <div class="email">
+            <input type="checkbox" name=""><i class="far fa-star"></i>
+            <div class="email-sender">Shoulder Singer</div>
+            <div class="email-title">Title of Email</div>
+            <div class="email-time">Sept 15</div>
+            <div class="email-actions"><i class="fas fa-archive"></i><i class="fas fa-trash"></i><i class="fas fa-envelope-open"></i><i class="fas fa-clock"></i></div>
+          </div>
+          <div class="email">
+            <input type="checkbox" name=""><i class="far fa-star"></i>
+            <div class="email-sender">English Master</div>
+            <div class="email-title">Title of Email</div>
+            <div class="email-time">Sept 14</div>
+            <div class="email-actions"><i class="fas fa-archive"></i><i class="fas fa-trash"></i><i class="fas fa-envelope-open"></i><i class="fas fa-clock"></i></div>
+          </div>
+          <div class="email">
+            <input type="checkbox" name=""><i class="far fa-star"></i>
+            <div class="email-sender">Mom</div>
+            <div class="email-title">Title of Email</div>
+            <div class="email-time">Sept 13</div>
+            <div class="email-actions"><i class="fas fa-archive"></i><i class="fas fa-trash"></i><i class="fas fa-envelope-open"></i><i class="fas fa-clock"></i></div>
+          </div>
+          <div class="email">
+            <input type="checkbox" name=""><i class="far fa-star"></i>
+            <div class="email-sender">Nester Blackreach</div>
+            <div class="email-title">Title of Email</div>
+            <div class="email-time">Sept 13</div>
+            <div class="email-actions"><i class="fas fa-archive"></i><i class="fas fa-trash"></i><i class="fas fa-envelope-open"></i><i class="fas fa-clock"></i></div>
+          </div>
         </div>
-        <div class="email">
-          <input type="checkbox" name=""><i class="far fa-star"></i>
-          <div class="email-sender">Mom</div>
-          <div class="email-title">Title of Email</div>
-          <div class="email-time">9:42 AM</div>
-          <div class="email-actions"><i class="fas fa-archive"></i><i class="fas fa-trash"></i><i class="fas fa-envelope-open"></i><i class="fas fa-clock"></i></div>
+        <div class="emails">
+          <div class="email">
+            <input type="checkbox" name=""><i class="far fa-star"></i>
+            <div class="email-sender">Mister Klein</div>
+            <div class="email-title">Title of Email</div>
+            <div class="email-time">Sept 12</div>
+            <div class="email-actions"><i class="fas fa-archive"></i><i class="fas fa-trash"></i><i class="fas fa-envelope-open"></i><i class="fas fa-clock"></i></div>
+          </div>
+          <div class="email">
+            <input type="checkbox" name=""><i class="far fa-star"></i>
+            <div class="email-sender">Dad</div>
+            <div class="email-title">Title of Email</div>
+            <div class="email-time">Sept 11</div>
+            <div class="email-actions"><i class="fas fa-archive"></i><i class="fas fa-trash"></i><i class="fas fa-envelope-open"></i><i class="fas fa-clock"></i></div>
+          </div>
+          <div class="email">
+            <input type="checkbox" name=""><i class="far fa-star"></i>
+            <div class="email-sender">Klestin Creature</div>
+            <div class="email-title">Title of Email</div>
+            <div class="email-time">Sept 11</div>
+            <div class="email-actions"><i class="fas fa-archive"></i><i class="fas fa-trash"></i><i class="fas fa-envelope-open"></i><i class="fas fa-clock"></i></div>
+          </div>
+          <div class="email">
+            <input type="checkbox" name=""><i class="far fa-star"></i>
+            <div class="email-sender">The Manumission Society</div>
+            <div class="email-title">Title of Email</div>
+            <div class="email-time">Sept 7</div>
+            <div class="email-actions"><i class="fas fa-archive"></i><i class="fas fa-trash"></i><i class="fas fa-envelope-open"></i><i class="fas fa-clock"></i></div>
+          </div>
+          <div class="email">
+            <input type="checkbox" name=""><i class="far fa-star"></i>
+            <div class="email-sender">Christopher Hitchens</div>
+            <div class="email-title">Title of Email</div>
+            <div class="email-time">Sept 3</div>
+            <div class="email-actions"><i class="fas fa-archive"></i><i class="fas fa-trash"></i><i class="fas fa-envelope-open"></i><i class="fas fa-clock"></i></div>
+          </div>
+          <div class="email">
+            <input type="checkbox" name=""><i class="far fa-star"></i>
+            <div class="email-sender">E. M. Forster</div>
+            <div class="email-title">Title of Email</div>
+            <div class="email-time">August 15</div>
+            <div class="email-actions"><i class="fas fa-archive"></i><i class="fas fa-trash"></i><i class="fas fa-envelope-open"></i><i class="fas fa-clock"></i></div>
+          </div>
+        </div>
+        <div class="emails">
+          <div class="email">
+            <input type="checkbox" name=""><i class="far fa-star"></i>
+            <div class="email-sender">George Orwell</div>
+            <div class="email-title">Title of Email</div>
+            <div class="email-time">August 14</div>
+            <div class="email-actions"><i class="fas fa-archive"></i><i class="fas fa-trash"></i><i class="fas fa-envelope-open"></i><i class="fas fa-clock"></i></div>
+          </div>
+          <div class="email">
+            <input type="checkbox" name=""><i class="far fa-star"></i>
+            <div class="email-sender">Mark Twain</div>
+            <div class="email-title">Title of Email</div>
+            <div class="email-time">August 13</div>
+            <div class="email-actions"><i class="fas fa-archive"></i><i class="fas fa-trash"></i><i class="fas fa-envelope-open"></i><i class="fas fa-clock"></i></div>
+          </div>
+          <div class="email">
+            <input type="checkbox" name=""><i class="far fa-star"></i>
+            <div class="email-sender">Margaret Singer</div>
+            <div class="email-title">Title of Email</div>
+            <div class="email-time">August 10</div>
+            <div class="email-actions"><i class="fas fa-archive"></i><i class="fas fa-trash"></i><i class="fas fa-envelope-open"></i><i class="fas fa-clock"></i></div>
+          </div>
+          <div class="email">
+            <input type="checkbox" name=""><i class="far fa-star"></i>
+            <div class="email-sender">Pumpkin Head</div>
+            <div class="email-title">Title of Email</div>
+            <div class="email-time">August 7</div>
+            <div class="email-actions"><i class="fas fa-archive"></i><i class="fas fa-trash"></i><i class="fas fa-envelope-open"></i><i class="fas fa-clock"></i></div>
+          </div>
+          <div class="email">
+            <input type="checkbox" name=""><i class="far fa-star"></i>
+            <div class="email-sender">Sister Frieda</div>
+            <div class="email-title">Title of Email</div>
+            <div class="email-time">August 5</div>
+            <div class="email-actions"><i class="fas fa-archive"></i><i class="fas fa-trash"></i><i class="fas fa-envelope-open"></i><i class="fas fa-clock"></i></div>
+          </div>
+          <div class="email">
+            <input type="checkbox" name=""><i class="far fa-star"></i>
+            <div class="email-sender">Dindra Maxime</div>
+            <div class="email-title">Title of Email</div>
+            <div class="email-time">May 23</div>
+            <div class="email-actions"><i class="fas fa-archive"></i><i class="fas fa-trash"></i><i class="fas fa-envelope-open"></i><i class="fas fa-clock"></i></div>
+          </div>
         </div>
       </div>
     </div>

@@ -1,12 +1,14 @@
 @use '../libs' as *;
 
 .side-bar {
+    position: relative;
     grid-column: 1;
 
-    .compose{
+    .compose {
         .compose-btn {
             background-color: getColor(compose);
-            width: 40%;
+            position: relative;
+            width: 60%;
             border-radius: 40px;
             height: 55px;
             @include flex-center;
@@ -14,43 +16,20 @@
             mask-image: url(#plus);
             margin: 18px 10px;
 
-            i{
-                font-size: 200%;
-                // color: getColor(transp);
+            img {
+                width: 25px;
+                height: 25px;
             }
-
         }
     }
 
-    .mail-folders{
+    .mail-folders {
+        height: 20vh;
+        overflow: scroll;
         .folder {
-            display: flex;
-            align-items: center;
-            padding: 5px;
-            padding: 10px 10px;
-            padding-left: $side-left-pad;
-            margin-right: $side-right-marg;
-            border-bottom-right-radius: 30px;
-            border-top-right-radius: 30px;
-            color: getColor(fg);
-            
-            &:first-of-type{
-                background-color: getColor(search);
-            }
+            @include side-folder;
 
-            &:hover{
-                background-color: getColor(folder-hover);
-            }
-
-
-            i{
-                color: getColor(side-icon);
-            }
-            .folder-name{
-                // font-weight: bold;
-                margin-left: 20px;
-            }
-            .cont-num{
+            .cont-num {
                 margin-left: auto;
                 text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.411);
                 font-size: 90%;
@@ -58,12 +37,106 @@
         }
     }
 
+    .meet-box {
+        border-top: 2px solid getColor(outline);
+        padding-bottom: 15px;
+        @include side-folder-head;
+
+        .start-meet,
+        .join-meet {
+            @include side-folder;
+            height: 15px;
+        }
+    }
+
     .hangouts {
+        border-top: 2px solid getColor(outline);
+        padding-bottom: 15px;
+        position: relative;
+        @include side-folder-head;
+
         .my-user {
-            .user-online{
-                img{
+            width: 80%;
+            margin: auto;
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            color: getColor(fg);
+            border-bottom: 1px solid getColor(outline-bright);
+            .user-online {
+                position: relative;
+                height: min-content;
+                width: min-content;
+                img {
                     @include user-pic;
                 }
+                .online-green {
+                    position: absolute;
+                    height: 10px;
+                    width: 10px;
+                    background-color: rgb(23, 201, 23);
+                    border-radius: 50%;
+                    bottom: 0px;
+                    right: 0;
+                }
+            }
+            .user-line {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                .user-info {
+                    margin-left: 10px;
+                    i{
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+
+        .friend {
+            color: getColor(fg);
+            display: flex;
+            align-items: center;
+            width: 80%;
+            margin: auto;
+            padding: 10px 0px;
+            .friend-icon {
+                @include user-pic;
+                @include flex-center;
+                width: 35px; // match user-pic
+                background-color: rgb(105, 60, 165);
+            }
+
+            .user-info {
+                margin-left: 10px;
+                .last-msg {
+                    margin-top: 4px;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-weight: bold;
+                    color: getColor(side-icon);
+                    font-size: 80%;
+                }
+            }
+        }
+    }
+
+    .footer-icons {
+        position: absolute;
+        margin-left: auto;
+        width: 100%;
+        border-top: 1px solid getColor(outline-bright);
+        border-right: 1px solid getColor(outline-bright);
+        left: 50%;
+        bottom: -10px;
+        transform: translate(-50%, -50%);
+        @include flex-center;
+        // margin-left: auto;
+        i {
+            font-size: 120%;
+            color: getColor(side-icon);
+            padding: 10px;
+            &:nth-of-type(2) {
+                background-color: getColor(outline-bright);
             }
         }
     }

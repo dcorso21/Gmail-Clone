@@ -1,5 +1,25 @@
 @use '../libs' as *;
 
+/* Scrollbar  */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: getColor(outline-bright);
+}
+
+::-webkit-scrollbar-corner{
+    color: transparent;
+}
+
 @font-face { // Importing Google's Font
     font-family: "Product Sans";
     font-style: normal;
@@ -21,5 +41,7 @@ body {
 
 .main-layout {
     display: grid;
+    height: 90vh;
     grid-template-columns: $col-widths;
+    // grid-template-rows: 100vh -70px;
 }

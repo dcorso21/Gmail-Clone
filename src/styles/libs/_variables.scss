@@ -4,14 +4,12 @@ $left-w: 20%;
 $col-widths: $left-w 1fr;
 $header-widths: $left-w 1fr 1fr;
 
-
 // Side Bar
 $side-left-pad: 25px;
-$side-right-marg: 20px;
+$side-right-marg: 10px;
 
-
-//email 
-$em-right-marg:25px;
+//email
+$em-right-marg: 5px;
 
 $color_palette: (
     // Basic
@@ -19,19 +17,18 @@ $color_palette: (
     bg: #16212b,
     fg: #fff,
     outline: rgba(255, 255, 255, 0.116),
-    
+    outline-bright: rgba(255, 255, 255, 0.308),
     //Searchbar
     search: rgba(255, 255, 255, 0.267),
     placehold: #fff,
-
     // SideBar
     compose: #fff,
     side-icon: rgba(255, 255, 255, 0.664),
     folder-hover: rgba(255, 255, 255, 0.158),
-
     // Emails
     em_bg: rgba(255, 255, 255, 0.87),
-    filter: #6E6B6D,
-    red: #D93025,
-    outline-em: #DADBDE,
+    filter-hover-bg: rgb(223, 222, 222),
+    filter: #6e6b6d,
+    red: #d93025,
+    outline-em: #dadbde
 );
