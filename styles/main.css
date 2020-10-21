@@ -64,6 +64,26 @@ input, select, textarea {
   appearance: none;
 }
 
+/* Scrollbar  */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.308);
+}
+
+::-webkit-scrollbar-corner {
+  color: transparent;
+}
+
 @font-face {
   font-family: "Product Sans";
   font-style: normal;
@@ -83,6 +103,7 @@ body {
 
 .main-layout {
   display: grid;
+  height: 90vh;
   grid-template-columns: 20% 1fr;
 }
 
@@ -137,6 +158,7 @@ body {
 }
 .header .head-center .searchBar .left-search input {
   background-color: rgba(255, 255, 255, 0);
+  color: #fff;
   border: none;
   width: 40vw;
   height: 50px;
@@ -165,11 +187,13 @@ body {
 }
 
 .side-bar {
+  position: relative;
   grid-column: 1;
 }
 .side-bar .compose .compose-btn {
   background-color: #fff;
-  width: 40%;
+  position: relative;
+  width: 60%;
   border-radius: 40px;
   height: 55px;
   display: flex;
@@ -179,16 +203,21 @@ body {
   mask-image: url(#plus);
   margin: 18px 10px;
 }
-.side-bar .compose .compose-btn i {
-  font-size: 200%;
+.side-bar .compose .compose-btn img {
+  width: 25px;
+  height: 25px;
+}
+.side-bar .mail-folders {
+  height: 20vh;
+  overflow: scroll;
 }
 .side-bar .mail-folders .folder {
+  position: relative;
   display: flex;
   align-items: center;
   padding: 5px;
   padding: 10px 10px;
-  padding-left: 25px;
-  margin-right: 20px;
+  margin-right: 10px;
   border-bottom-right-radius: 30px;
   border-top-right-radius: 30px;
   color: #fff;
@@ -200,23 +229,161 @@ body {
   background-color: rgba(255, 255, 255, 0.158);
 }
 .side-bar .mail-folders .folder i {
+  margin-left: 25px;
+  position: absolute;
   color: rgba(255, 255, 255, 0.664);
 }
 .side-bar .mail-folders .folder .folder-name {
-  margin-left: 20px;
+  position: absolute;
+  margin-left: 55px;
 }
 .side-bar .mail-folders .folder .cont-num {
   margin-left: auto;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.411);
   font-size: 90%;
 }
+.side-bar .meet-box {
+  border-top: 2px solid rgba(255, 255, 255, 0.116);
+  padding-bottom: 15px;
+}
+.side-bar .meet-box .head {
+  color: #fff;
+  padding: 15px 25px;
+}
+.side-bar .meet-box .start-meet,
+.side-bar .meet-box .join-meet {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  padding: 10px 10px;
+  margin-right: 10px;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+  color: #fff;
+  height: 15px;
+}
+.side-bar .meet-box .start-meet:first-of-type,
+.side-bar .meet-box .join-meet:first-of-type {
+  background-color: rgba(255, 255, 255, 0.267);
+}
+.side-bar .meet-box .start-meet:hover,
+.side-bar .meet-box .join-meet:hover {
+  background-color: rgba(255, 255, 255, 0.158);
+}
+.side-bar .meet-box .start-meet i,
+.side-bar .meet-box .join-meet i {
+  margin-left: 25px;
+  position: absolute;
+  color: rgba(255, 255, 255, 0.664);
+}
+.side-bar .meet-box .start-meet .folder-name,
+.side-bar .meet-box .join-meet .folder-name {
+  position: absolute;
+  margin-left: 55px;
+}
+.side-bar .hangouts {
+  border-top: 2px solid rgba(255, 255, 255, 0.116);
+  padding-bottom: 15px;
+  position: relative;
+}
+.side-bar .hangouts .head {
+  color: #fff;
+  padding: 15px 25px;
+}
+.side-bar .hangouts .my-user {
+  width: 80%;
+  margin: auto;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.308);
+}
+.side-bar .hangouts .my-user .user-online {
+  position: relative;
+  height: min-content;
+  width: min-content;
+}
 .side-bar .hangouts .my-user .user-online img {
   height: 35px;
   border-radius: 50%;
 }
+.side-bar .hangouts .my-user .user-online .online-green {
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  background-color: #17c917;
+  border-radius: 50%;
+  bottom: 0px;
+  right: 0;
+}
+.side-bar .hangouts .my-user .user-line {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.side-bar .hangouts .my-user .user-line .user-info {
+  margin-left: 10px;
+}
+.side-bar .hangouts .my-user .user-line .user-info i {
+  margin-left: 10px;
+}
+.side-bar .hangouts .friend {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+  padding: 10px 0px;
+}
+.side-bar .hangouts .friend .friend-icon {
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  background-color: #693ca5;
+}
+.side-bar .hangouts .friend .user-info {
+  margin-left: 10px;
+}
+.side-bar .hangouts .friend .user-info .last-msg {
+  margin-top: 4px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.664);
+  font-size: 80%;
+}
+.side-bar .footer-icons {
+  position: absolute;
+  margin-left: auto;
+  width: 100%;
+  border-top: 1px solid rgba(255, 255, 255, 0.308);
+  border-right: 1px solid rgba(255, 255, 255, 0.308);
+  left: 50%;
+  bottom: -10px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.side-bar .footer-icons i {
+  font-size: 120%;
+  color: rgba(255, 255, 255, 0.664);
+  padding: 10px;
+}
+.side-bar .footer-icons i:nth-of-type(2) {
+  background-color: rgba(255, 255, 255, 0.308);
+}
 
 .email-main {
   grid-column: 2;
+}
+.email-main .scroll {
+  overflow: scroll;
+  height: 86vh;
 }
 .email-main .actions {
   display: flex;
@@ -242,27 +409,30 @@ body {
   display: flex;
   height: 60px;
   align-items: center;
-  margin-right: 25px;
-  border-bottom: 1px solid #DADBDE;
+  margin-right: 5px;
+  border-bottom: 1px solid #dadbde;
 }
 .email-main .filters .filter {
   position: relative;
-  color: #6E6B6D;
+  color: #6e6b6d;
   width: 24%;
+  height: 100%;
 }
 .email-main .filters .filter i {
+  margin: 22px 0;
   margin-left: 15%;
 }
 .email-main .filters .filter span {
+  position: relative;
   margin-left: 20px;
 }
 .email-main .filters .filter .underline {
   position: absolute;
-  bottom: -21px;
+  bottom: 0px;
   height: 5px;
   width: 90%;
   margin-left: 5%;
-  background-color: #D93025;
+  background-color: #d93025;
   overflow: hidden;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
@@ -272,10 +442,13 @@ body {
   opacity: 1;
 }
 .email-main .filters .filter:first-of-type {
-  color: #D93025;
+  color: #d93025;
+}
+.email-main .filters .filter:hover {
+  background-color: #dfdede;
 }
 .email-main .emails {
-  margin-right: 25px;
+  margin-right: 5px;
   font-family: Arial, Helvetica, sans-serif;
 }
 .email-main .emails .email {
@@ -284,7 +457,8 @@ body {
   align-items: center;
   background-color: rgba(255, 255, 255, 0.87);
   padding: 15px;
-  border-bottom: 1px solid #DADBDE;
+  border-bottom: 1px solid #dadbde;
+  transition: all 0.2s;
 }
 .email-main .emails .email .email-sender {
   position: absolute;
@@ -305,8 +479,19 @@ body {
   position: absolute;
   display: flex;
   justify-content: space-between;
-  color: #6E6B6D;
+  color: #6e6b6d;
   font-size: 120%;
   width: 10%;
   right: 20px;
+  opacity: 0;
+}
+.email-main .emails .email:hover {
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.13), 0 -2px 2px rgba(0, 0, 0, 0.13);
+  z-index: 10;
+}
+.email-main .emails .email:hover > .email-actions {
+  opacity: 1;
+}
+.email-main .emails .email:hover > .email-time {
+  opacity: 0;
 }
