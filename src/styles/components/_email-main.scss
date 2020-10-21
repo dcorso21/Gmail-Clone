@@ -3,7 +3,7 @@
 .email-main {
     grid-column: 2;
 
-    .scroll{
+    .scroll {
         overflow: scroll;
         height: 86vh;
     }
@@ -51,9 +51,27 @@
                 margin-left: 15%;
             }
 
-            span {
+            .filter-title {
                 position: relative;
                 margin-left: 20px;
+            }
+
+            .new {
+                font-size: 80%;
+                margin-left: 8px;
+                padding: 1px 4px;
+                border-radius: 2px;
+                color: getColor(fg);
+
+                &#social-new {
+                    background-color: getColor(bl);
+                }
+                &#promo-new {
+                    background-color: getColor(gr);
+                }
+                &#update-new {
+                    background-color: getColor(org);
+                }
             }
 
             .underline {
@@ -63,7 +81,7 @@
                 height: 5px;
                 width: 90%;
                 margin-left: 5%;
-                background-color: getColor(red);
+                background-color: getColor(rd);
                 overflow: hidden;
                 border-top-right-radius: 20px;
                 border-top-left-radius: 20px;
@@ -77,7 +95,7 @@
             }
 
             &:first-of-type {
-                color: getColor(red);
+                color: getColor(rd);
             }
 
             &:hover {

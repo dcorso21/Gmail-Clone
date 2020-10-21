@@ -26,9 +26,12 @@ $color_palette: (
     side-icon: rgba(255, 255, 255, 0.664),
     folder-hover: rgba(255, 255, 255, 0.158),
     // Emails
-    em_bg: rgba(255, 255, 255, 0.87),
-    filter-hover-bg: rgb(223, 222, 222),
+    em_bg: rgba(219, 219, 219, 0.87),
+    filter-hover-bg: rgba(0, 0, 0, 0.062),
     filter: #6e6b6d,
-    red: #d93025,
+    rd: #d93025,
+    bl: #1A73E8,
+    gr: #188037,
+    org: #E37401,
     outline-em: #dadbde
 );
